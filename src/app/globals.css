@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Design system — Fernanda Moreira Bezerra Advocacia
+ * Dark, editorial luxury palette (deep espresso + gold + ivory).
+ * Tailwind v4 CSS-first config: tokens live in @theme, semantic
+ * shadcn/ui variables map onto the same palette below.
+ */
+
+@theme inline {
+  /* Brand palette */
+  --color-espresso: #0b0a09;
+  --color-panel: #131210;
+  --color-gold: #c6a34d;
+  --color-gold-light: #e6cd8a;
+  --color-ivory: #f3efe6;
+  --color-muted-fg: #948d7c;
+  --color-hairline: rgba(198, 163, 77, 0.32);
+
+  /* shadcn/ui semantic tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Typography — bound to next/font CSS variables in layout.tsx */
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
+
+  /* Accordion motion (Radix) */
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --background: #0b0a09;
+  --foreground: #f3efe6;
+  --card: #131210;
+  --card-foreground: #f3efe6;
+  --popover: #131210;
+  --popover-foreground: #f3efe6;
+  --primary: #c6a34d;
+  --primary-foreground: #0b0a09;
+  --secondary: #1d1a16;
+  --secondary-foreground: #f3efe6;
+  --muted: #131210;
+  --muted-foreground: #948d7c;
+  --accent: #1d1a16;
+  --accent-foreground: #e6cd8a;
+  --destructive: #b4453a;
+  --destructive-foreground: #f3efe6;
+  --border: rgba(198, 163, 77, 0.32);
+  --input: rgba(198, 163, 77, 0.32);
+  --ring: #c6a34d;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans font-light antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif font-normal tracking-[0.01em];
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility eyebrow {
+  @apply block text-xs uppercase tracking-[0.32em] text-primary;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}

@@ -1,0 +1,10 @@
+export { Hero } from "./hero";
+export { About } from "./about";
+export { PracticeAreas } from "./practice-areas";
+export { Services } from "./services";
+export { Differentials } from "./differentials";
+export { ProcessSteps } from "./process-steps";
+export { Faq } from "./faq";
+export { Testimonials } from "./testimonials";
+export { Contact } from "./contact";
+export { CtaFinal } from "./cta-final";

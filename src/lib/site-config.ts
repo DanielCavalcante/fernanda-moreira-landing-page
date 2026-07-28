@@ -5,10 +5,10 @@
  */
 
 const WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "558396312561";
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5583996312561";
 
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Olá! Vim pelo site e gostaria de agendar um atendimento.",
+  "Olá! Vim pelo site e gostaria de falar com um advogado.",
 );
 
 export const siteConfig = {
@@ -17,15 +17,15 @@ export const siteConfig = {
   role: "Advocacia Imobiliária, Cível e de Família",
   description:
     "Advocacia Imobiliária, Cível e de Família com atendimento estratégico e personalizado para proteger seu patrimônio, seus direitos e sua tranquilidade.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fernandamoreirabezerra.adv.br",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fernanda-moreira-landing-page.vercel.app",
   contact: {
     whatsappNumber: WHATSAPP_NUMBER,
     whatsappUrl: `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`,
-    phoneDisplay: "(83) 9 6312-561",
+    phoneDisplay: "(83) 99631-2561",
     email: "contato@fernandamoreirabezerra.adv.br",
     instagram: "@fernandamoreiramb_",
     instagramUrl: "https://www.instagram.com/fernandamoreiramb_",
-    oab: "OAB/PB [nº do registro]",
+    oab: "OAB/PB [28.747 B]",
     hours: "Segunda a sexta, 9h às 18h",
   },
   nav: [

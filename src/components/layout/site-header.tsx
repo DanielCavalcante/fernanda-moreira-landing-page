@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
+import Image from "next/image";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -20,6 +20,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3">
+        <a href="#top" aria-label={`${siteConfig.legalName} — início`}>
+          <Image
+            src="/logo.jpeg"
+            alt={siteConfig.legalName}
+            width={52}
+            height={52}
+            priority
+            className="h-12 w-auto sm:h-14"
+          />
+        </a>
         <a
           href="#top"
           className="font-serif text-lg tracking-wide text-ivory"

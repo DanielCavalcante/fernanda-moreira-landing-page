@@ -1,13 +1,19 @@
+import Image from "next/image";
 import { Section } from "@/components/sections/shared";
 
 export function About() {
   return (
     <Section id="sobre" panel>
       <div className="grid items-center gap-12 md:grid-cols-[0.82fr_1.18fr]">
-        <div className="flex aspect-[4/5] items-center justify-center border border-border bg-gradient-to-br from-secondary to-background">
-          <span className="font-serif italic text-primary">
-            Fernanda Moreira Bezerra
-          </span>
+        <div className="relative aspect-[4/5] overflow-hidden border border-border">
+          <Image
+            src="/fernanda.jpeg"
+            alt="Fernanda Moreira Bezerra, advogada"
+            fill
+            sizes="(max-width: 768px) 100vw, 40vw"
+            className="object-cover object-top"
+            priority
+          />
         </div>
         <div>
           <span className="eyebrow">Quem sou</span>

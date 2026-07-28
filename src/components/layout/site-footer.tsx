@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 export function SiteFooter() {
@@ -5,6 +6,13 @@ export function SiteFooter() {
     <footer className="px-6 pb-8 pt-16">
       <div className="mx-auto w-full max-w-6xl">
         <div className="flex flex-wrap items-center gap-5 border-b border-border pb-10">
+          <Image
+            src="/logo.jpeg"
+            alt={siteConfig.legalName}
+            width={64}
+            height={64}
+            className="h-14 w-auto"
+          />
           <span className="font-serif text-xl text-ivory">
             {siteConfig.legalName}
           </span>

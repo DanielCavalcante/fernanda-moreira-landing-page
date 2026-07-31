@@ -22,22 +22,13 @@ export function SiteHeader() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-3">
         <a href="#top" aria-label={`${siteConfig.legalName} — início`}>
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt={siteConfig.legalName}
             width={52}
             height={52}
             priority
-            className="h-12 w-auto sm:h-14"
+            className="h-12 w-auto sm:h-14 tracking-wide"
           />
-        </a>
-        <a
-          href="#top"
-          className="font-serif text-lg tracking-wide text-ivory"
-        >
-          Fernanda Moreira Bezerra
-          <span className="ml-2 hidden text-xs uppercase tracking-[0.28em] text-primary sm:inline">
-            Advocacia
-          </span>
         </a>
 
         <nav className="hidden md:block">

@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="mx-auto w-full max-w-6xl">
         <div className="flex flex-wrap items-center gap-5 border-b border-border pb-10">
           <Image
-            src="/logo.jpeg"
+            src="/logo.png"
             alt={siteConfig.legalName}
             width={64}
             height={64}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Heart, Home, Scale } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -12,9 +13,18 @@ const specialties = [
 
 export function Hero() {
   return (
-    <section id="top" className="px-6 pt-24">
+    <section id="top" className="px-6 pt-20 sm:pt-24">
       <div className="mx-auto max-w-3xl text-center">
-        <span className="eyebrow">Advocacia</span>
+        {/* Logo/monograma centralizado acima do nome.
+            Para usar a logo completa, troque src por "/logo.png". */}
+        <Image
+          src="/monogram.png"
+          alt={siteConfig.legalName}
+          width={140}
+          height={140}
+          priority
+          className="mx-auto mb-6 h-24 w-auto sm:h-28"
+        />
         <h1 className="mt-3 text-4xl leading-tight text-ivory sm:text-5xl md:text-6xl">
           {siteConfig.name}
         </h1>
